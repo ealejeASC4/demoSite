@@ -213,7 +213,7 @@ $(document).ready(function(){
     // });
 });
 </script>
-      <input  class="btn-theme btn-theme-sm btn-default-bg text-uppercase" type="button" id="submit" onclick="autoRegister(),submitScore();"value="Register NOW"'Submit Score';>
+      <input  class="btn-theme btn-theme-sm btn-default-bg text-uppercase" type="button" id="submit" onclick="autoRegister(),submitScore();"value="Register NOW";>
 <div id="events"></div>
 <div style="width:100%; text-align:left;">
     <iframe id="ticket" src="" frameborder="0" height="275" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true">
@@ -248,33 +248,26 @@ $(document).ready(function(){
 
 
    <div class ="mainContainer">
-        <!--Text greeting user-->
-        <header>
-            <h1>WELCOME: <span class="userName">GUEST</span></h1>    
-       </header>
-<div class="GObutton">
+     <h3>Your profile:</h3><div class="name2"></div>
+
+<div class="userContainer">
+
+       <form>
+            <div class="textContainer">
+                <div>
+                    <p><center><font color="grey">Your name:</font></center></p><center><input id="name" type="text"></center>
+                </div>
+                
+           </div>
+            <div class="GObutton">
                 <center><input type="reset" onclick="updateDB();" value="Submit"></center>
             </div>
-       <!--Populate section with user data-->
-        <section>
-            
-            <!--picture-->
-            <div class = "userImg">
-                <img src="assets/placeholder.png">
-            </div>
-
-           <!--User Data-->
-            <div class="userData" >
-                <h2>E-MAIL:</h2>
-                <p class="email"></p>
-            </div>
-        </section>
+        </form>
     </div>
 
-    <div class="signs">
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        <a href="#" class="signOut" onclick="onSignOut();">Sign out</a>
     </div>
+
+    
                                 
                                 </div>
                                 
@@ -287,8 +280,14 @@ $(document).ready(function(){
                             <div class="pricing pricing-active">
                                 <div class="margin-b-30">
                                     <i class="pricing-icon icon-badge"></i>
-                                    <h3>leaderboard </h3>
+                                    <h3>Leaderboard </h3>
                                     
+
+
+<div class="name1"></div>
+
+
+
                                 </div>
                                
                             </div>
@@ -301,6 +300,11 @@ $(document).ready(function(){
                                     <i class="pricing-icon icon-shield"></i>
                                     <h3>Older leaderboard</h3>
                                     
+
+
+
+
+
                                 </div>
                                
                             </div>

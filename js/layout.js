@@ -64,7 +64,7 @@ function autoRegister() {
        
    });
 }
-
+//scoreboard
 function submitScore() {
        firebase.database().ref(myName).set(
         {
@@ -73,13 +73,6 @@ function submitScore() {
     )
 }
 
-// Show data
- var database = firebase.database().ref()
-
-database.on("child_added",  function(rowData) {
-    $("body").append("<div><em><font size='5'>"+rowData.key+" : "+rowData.val().HighScore+"</em></font></div>");
-})
-
 function updateDB(){
 
    const name = $("#name").val();
@@ -87,7 +80,7 @@ function updateDB(){
     myName = name
 
    console.log(`${name} : ${message}`);
-    $(".userData").append(`<p><center><font color='white'><font size='10'>Welcome: ${name}</font></font></center></p>`)
+    $(".name2").append(`<p><center><font color='grey'><font size='10'>Welcome: ${name}</font></font></center></p>`)
 
 
    //Update database here
@@ -95,6 +88,15 @@ function updateDB(){
    
 
 }
+
+// Show data
+ var database = firebase.database().ref()
+
+database.on("child_added",  function(rowData) {
+    $(".name1").append("<div><em><font size='5'>"+rowData.key+" : "+rowData.val().HighScore+"</em></font></div>");
+})
+
+
 
 
 var Layout = function () {

@@ -290,11 +290,7 @@ function onSignOut() {
     //should sign user out and toggleHidden
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-        if (confirm('Save progress?')) {
-    // Save it!
-} else {
-    // Do nothing!
-}
+       
         console.log('User signed out.')
         //setting back to default
         $(".userName").text("GUEST");

@@ -16,7 +16,6 @@ function setPosition(position) {
 }
 
 
-
 function showMap(){
     console.log(lad);
     console.log(long);
@@ -28,6 +27,7 @@ function showMap(){
     &q=Yahoo+New+York&center=${lad},${long}" allowfullscreen>
 </iframe>`)
 }
+
 
 
 let newEvent;
@@ -273,12 +273,15 @@ $(document).ready(function() {
     
 });
 
+//sign in 
+
+
 function onSignIn(googleUser) {
     console.log('User signed in!');
     var profile = googleUser.getBasicProfile();
     //change userName text, img source, & email text based on profile
     $(".userName").text(profile.getName());
-    $("imgURL").attr("src", profile.getImageUrl());
+    
     $(".email").text(profile.getEmail());
 }
 
@@ -295,7 +298,7 @@ function onSignOut() {
         console.log('User signed out.')
         //setting back to default
         $(".userName").text("GUEST");
-        $("imgURL").attr("src", "assets/placeholder.png");
+        
         $(".email").text("");
     });
 }

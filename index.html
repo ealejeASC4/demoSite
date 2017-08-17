@@ -14,7 +14,12 @@
     <!-- BEGIN HEAD -->
     <head>
 
+<!--Reference platform.js library here
+    592056830069-5ecmmhjbcopeapee54fqoel9vjgg6omd.apps.googleusercontent.com-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
+   <!--Reference Client ID in meta tag here-->
+    <meta name="google-signin-client_id" content="592056830069-5ecmmhjbcopeapee54fqoel9vjgg6omd.apps.googleusercontent.com">
 
 <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 <script>
@@ -239,7 +244,7 @@ $(document).ready(function(){
                 <div class="content-lg container">
                     <div class="row row-space-1">
                         <div class="col-sm-4 sm-margin-b-2">
-                            <h2>Leaderboard</h2>
+                            <h2>Leaderboards/Prizes</h2>
                             <!-- Pricing -->
                             <div class="pricing">
                                 <div class="margin-b-30">
@@ -250,12 +255,40 @@ $(document).ready(function(){
    <div class ="mainContainer">
      <h3>Your profile:</h3><div class="name2"></div>
 
+
+
+
+<div class="signs">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" class="signOut" onclick="onSignOut();">Sign out</a>
+    </div>
+
+
+   <div class ="mainContainer">
+        <!--Text greeting user-->
+        <header>
+            <h1>WELCOME: <span class="userName">GUEST</span></h1>    
+       </header>
+
+       <!--Populate section with user data-->
+        <section>
+            
+         
+           <!--User Data-->
+            <div class="userData">
+                <h2>E-MAIL:</h2>
+                <p class="email"></p>
+            </div>
+        </section>
+    </div>
+    
 <div class="userContainer">
+
 
        <form>
             <div class="textContainer">
                 <div>
-                    <p><center><font color="grey">Your name:</font></center></p><center><input id="name" type="text"></center>
+                    <p><center><font color="grey">Your name:</font></center></p><center><input class='userName' id="name" type="text"></center>
                 </div>
                 
            </div>
@@ -298,10 +331,8 @@ $(document).ready(function(){
                             <div class="pricing">
                                 <div class="margin-b-30">
                                     <i class="pricing-icon icon-shield"></i>
-                                    <h3>Older leaderboard</h3>
+                                    <h3>Prizes Available</h3>
                                     
-
-
 
 
 
